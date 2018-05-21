@@ -7,11 +7,11 @@ def main():
 	return None
 
 def swap(string1,string2):
-	a=len(string2)
-	b=len(string1)
-	string2=string2 + string1
-	string1=string2[0:a]
-	string2=string2[a:a+b]
+	
+	string2=string1 + string2
+	string1=string2[len(string1):(len(string1)+len(string2))]
+
+	string2=string2[0:len(string1)]
 	return string1,string2
 
 if __name__=='__main__':
